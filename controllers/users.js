@@ -6,6 +6,12 @@
        res.end(JSON.stringify(req.usersArray));
      };
      
+
+     // controllers/users.js
+const sendUserCreated = (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.end(JSON.stringify(req.user));
+};
      // Экспортируем контроллер
-     module.exports = sendAllUsers;
+     module.exports = sendAllUsers, sendUserCreated;
      
